@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Expense Tracker App</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <h1 class="title">Expense Tracker App</h1>
+
+    <div class="trackerContent">
+      <h2>Add a new item:</h2>
+
+      <form action="" id="expenseForm">
+        <div class="inputContainer">
+          <div class="leftForm">
+            <div class="inputField">
+              <label for="type">Type:</label>
+              <select name="type" id="type" required>
+                <option value="">Choose one...</option>
+                <option value="cash">Cash</option>
+                <option value="creditCard">Credit Card</option>
+                <option value="crypto">Cryptocurrency</option>
+                <option value="others">Others</option>
+              </select>
+            </div>
+
+            <div class="inputField">
+              <label for="date">Date:</label>
+              <input type="date" id="date" required />
+            </div>
+          </div>
+          <div class="rightForm">
+            <div class="inputField">
+              <label for="name">Name:</label>
+              <input type="text" id="name" required />
+            </div>
+
+            <div class="inputField">
+              <label for="amount">Amount:</label>
+              <input type="text" id="amount" required />
+            </div>
+          </div>
+        </div>
+
+        <button type="submit" class="addExpense" id="addExpense">
+          Add a new expense
+        </button>
+      </form>
+
+      <table>
+        <tr>
+          <th>Type</th>
+          <th>Name</th>
+          <th>Date</th>
+          <th>Amount</th>
+          <th>Options</th>
+        </tr>
+        <tbody id="tableData"></tbody>
+      </table>
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
